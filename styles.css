@@ -1,0 +1,48 @@
+form{
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+}
+body{
+    background-color: darkcyan;
+}
+li{
+    background-color: darkseagreen;
+    height: 30px;
+}
+
+#debugger {
+    position: fixed;
+    background-color: darkgrey;
+    bottom: 10px;
+    width: 100%;
+}
+#clearAllButton{
+    position: absolute;
+    right: 5%;
+}
+.textField{
+    position: absolute;
+    left: 20%;
+}
+.checkBox{
+    position: absolute;
+    left: 10%;
+}
+.editButton{
+    position: absolute;
+    right: 20%;
+}
+.saveEditButton{
+    position: absolute;
+    right: 20%;
+}
+.deleteButton{
+    position: absolute;
+    right: 10%;
+}
+.inputField{
+    position: absolute;
+    left: 20%;
+}
+
