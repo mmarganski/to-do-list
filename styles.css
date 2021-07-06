@@ -1,11 +1,10 @@
-form{
+body{
     text-align: center;
     margin: auto;
     margin-top: 20px;
-}
-body{
     background-color: darkcyan;
 }
+
 li{
     background-color: darkseagreen;
     height: 30px;
