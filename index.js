@@ -3,9 +3,9 @@ class App {
     #todos
 
     constructor() {
-        this.todos = new Todos(() => this.printItems())
-        document.getElementById('mainSubmitButton').setAttribute('onclick', 'myApp.createNewTodo()')
-        document.getElementById('clearAllButton').setAttribute('onclick', 'myApp.clearAllTasks()')
+        this.todos = new Todos(this.printItems)
+        document.getElementById('mainSubmitButton').addEventListener('click', this.createNewTodo)
+        document.getElementById('clearAllButton').addEventListener('click', this.clearAllTasks)
     }
 
     clearAllTasks = () => {
@@ -130,7 +130,7 @@ class Todos {
 
             this.showElement('editButton', currentListElement)
             this.showElement('deleteButton', currentListElement)
-            toDoText .style.setProperty('text-decoration', '')
+            toDoText.style.setProperty('text-decoration', '')
             toggledTodo.toggle()
             this.setDebuggerStrings()
             this.onChange()
@@ -146,7 +146,6 @@ class Todos {
     }
 
     createNewListElement = (text, id) => {
-
         const checkbox = document.createElement('input')
         checkbox.setAttribute('type', 'checkbox')
         checkbox.setAttribute('class', 'checkBox')
@@ -203,7 +202,7 @@ class Todos {
     setDebuggerStrings = () => {
         const strings = []
 
-        this.toDoObjectsMap.forEach( todo => strings.push(todo.toString()))
+        this.toDoObjectsMap.forEach(todo => strings.push(todo.toString()))
         window.localStorage.setItem('todos', strings.join(' \r\n '))
     }
 }
