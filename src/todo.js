@@ -1,4 +1,4 @@
-class Todo {
+export class Todo {
     id
     #isDone
     #text
@@ -27,5 +27,3 @@ class Todo {
         return `[${this.#isDone ? 'x' : ' '}] ${this.#text}`
     }
 }
-
-export {Todo}

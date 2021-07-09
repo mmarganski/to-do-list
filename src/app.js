@@ -1,6 +1,6 @@
-import {Todos} from './todos.js';
+import { Todos } from './todos.js';
 
-class App {
+export class App {
     #todos
 
     constructor() {
@@ -32,5 +32,3 @@ class App {
         $('#debugger').text(window.localStorage.getItem('todos'))
     }
 }
-
-export {App}

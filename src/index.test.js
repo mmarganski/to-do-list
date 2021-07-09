@@ -1,4 +1,4 @@
-const {Todo} = require('./src/todo')
+const { Todo } = require('./todo')
 
 describe('Todo class', () => {
     test('should return string in correct format', () => {
@@ -11,11 +11,10 @@ describe('Todo class', () => {
 
     test(`should properly toggle` , () => {
         const testTodo1 = new Todo('lorem ipsum')
+
+        expect(testTodo1.toString()).toBe('[ ] lorem ipsum')
         testTodo1.toggle()
         expect(testTodo1.toString()).toBe('[x] lorem ipsum')
-
-        const testTodo2 = new Todo(null)
-        expect(testTodo2.toString()).toBe('[ ] ')
     } )
 
     test(`shouldn't crash with incorrect input` , () => {

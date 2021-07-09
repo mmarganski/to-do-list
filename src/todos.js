@@ -1,6 +1,6 @@
-import {Todo} from './todo.js';
+import { Todo } from './todo.js';
 
-class Todos {
+export class Todos {
     #toDoObjectsMap
 
     constructor(onChange) {
@@ -121,5 +121,3 @@ class Todos {
         window.localStorage.setItem('todos', strings.join(' \r\n '))
     }
 }
-
-export {Todos}
