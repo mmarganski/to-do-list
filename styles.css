@@ -1,0 +1,55 @@
+body{
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    background-color: darkcyan;
+}
+
+li{
+    background-color: darkseagreen;
+    height: 20px;
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+#debugger {
+    border-radius: 15px;
+    position: fixed;
+    background-color: darkgrey;
+    bottom: 10px;
+    width: 100%;
+}
+#clearAllButton{
+    position: absolute;
+    right: 5%;
+}
+.textField{
+    position: absolute;
+    left: 15%;
+    right: 20%;
+    width:60%
+}
+.checkBox{
+    position: absolute;
+    left: 5%;
+}
+.editButton{
+    position: absolute;
+    right: 12%;
+}
+.saveEditButton{
+    position: absolute;
+    right: 12%;
+}
+.deleteButton{
+    position: absolute;
+    right: 5%;
+}
+.inputField{
+    position: absolute;
+    left: 15%;
+    right: 20%;
+    width:60%
+}
+
