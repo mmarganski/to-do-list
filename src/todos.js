@@ -1,7 +1,6 @@
-import Todo from "./todo.js";
+import {Todo} from './todo.js';
 
 class Todos {
-
     #toDoObjectsMap
 
     constructor(onChange) {
@@ -20,21 +19,20 @@ class Todos {
     }
 
     clearAllTasks = () => {
-        $("#toDoList").empty()
+        $('#toDoList').empty()
         this.#toDoObjectsMap.clear()
         this.setDebuggerStrings()
         this.onChange()
     }
 
     deleteTodo = id => {
-
         $(`#${id}`).detach()
         this.#toDoObjectsMap.delete(id)
         this.setDebuggerStrings()
         this.onChange()
 
         if(this.#toDoObjectsMap.keys().length === 0) {
-            $("#clearAllButton").attr('hidden', true)
+            $('#clearAllButton').attr('hidden', true)
         }
     }
 
@@ -108,12 +106,12 @@ class Todos {
 
         li.append(div, textField)
         li.hover(() => div.show(), () => {
-            if(inputField.is(":hidden")){
+            if(inputField.is(':hidden')){
                 div.hide()
             }
         })
 
-        $("#toDoList").append(li)
+        $('#toDoList').append(li)
     }
 
     setDebuggerStrings = () => {
@@ -124,4 +122,4 @@ class Todos {
     }
 }
 
-export default Todos
+export {Todos}

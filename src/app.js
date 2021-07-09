@@ -1,20 +1,19 @@
-import Todos from "./todos.js";
+import {Todos} from './todos.js';
 
 class App {
-
     #todos
 
     constructor() {
         this.#todos = new Todos(this.printItems)
-        $("#clearAllButton").click(this.clearAllTasks)
-        $("#mainSubmitButton").click(this.createNewTodo)
+        $('#clearAllButton').click(this.clearAllTasks)
+        $('#mainSubmitButton').click(this.createNewTodo)
     }
 
     clearAllTasks = () => {
-        if (confirm("Are you sure you want to clear every task?")) {
+        if (confirm('Are you sure you want to clear every task?')) {
             this.#todos.clearAllTasks()
             this.printItems()
-            $("#clearAllButton").attr('hidden', true)
+            $('#clearAllButton').attr('hidden', true)
         }
     }
 
@@ -24,8 +23,8 @@ class App {
         if(inputValue.length > 0) {
             this.#todos.createNewTodo(inputValue.substring(0, 140))
             this.printItems()
-            $("#mainInput").val("")
-            $("#clearAllButton").show()
+            $('#mainInput').val('')
+            $('#clearAllButton').show()
         }
     }
 
@@ -34,4 +33,4 @@ class App {
     }
 }
 
-export default App
+export {App}

@@ -1,5 +1,4 @@
 class Todo {
-
     id
     #isDone
     #text
@@ -7,9 +6,9 @@ class Todo {
     constructor(input) {
         this.id = this.#createID()
         this.#isDone = false
-        this.#text = typeof input === "string"
+        this.#text = typeof input === 'string'
             ? input
-            : ""
+            : ''
     }
 
     #createID = () => {
@@ -25,8 +24,8 @@ class Todo {
     }
 
     toString = () => {
-        return `[${this.#isDone ? "x" : " "}] ${this.#text}`
+        return `[${this.#isDone ? 'x' : ' '}] ${this.#text}`
     }
 }
 
-export default Todo
+export {Todo}
